@@ -18,6 +18,8 @@ private:
 	std::vector<Goomba> goombas;
 	sf::Vector2f spawnPoint;
 	sf::Texture texture;
-
+	sf::Text textToDisplay;
+	int goombasBeingRendered = 0;
+	sf::Font font;
 };
 

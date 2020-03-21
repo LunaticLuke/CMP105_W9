@@ -5,6 +5,7 @@
 #include <string>
 #include <iostream>
 #include "BeachBallManager.h"
+#include "GoombaManager.h"
 
 class Level{
 public:
@@ -24,4 +25,5 @@ private:
 	sf::RenderWindow* window;
 	Input* input;
 	BeachBallManager beachBalls;
+	GoombaManager goombas;
 };

@@ -18,6 +18,6 @@ private:
 	std::vector<Ball> balls;
 	sf::Vector2f spawnPoint;
 	sf::Texture texture;
-	
+
 };
 

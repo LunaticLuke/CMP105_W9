@@ -19,21 +19,24 @@ void Level::handleInput(float dt)
 {
 	if (input->isKeyDown(sf::Keyboard::Enter))
 	{
-		beachBalls.spawn();
+		//beachBalls.spawn();
+		goombas.spawn();
 	}
 }
 
 // Update game objects
 void Level::update(float dt)
 {
-	beachBalls.update(dt);
+	//beachBalls.update(dt);
+	goombas.update(dt);
 }
 
 // Render level
 void Level::render()
 {
 	beginDraw();
-	beachBalls.Render(window);
+	//beachBalls.Render(window);
+	goombas.Render(window);
 	endDraw();
 }
 
