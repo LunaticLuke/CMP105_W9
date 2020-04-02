@@ -6,6 +6,7 @@
 #include <iostream>
 #include "BeachBallManager.h"
 #include "GoombaManager.h"
+#include "Player.h"
 
 class Level{
 public:
@@ -26,4 +27,5 @@ private:
 	Input* input;
 	BeachBallManager beachBalls;
 	GoombaManager goombas;
+	Player playerObject;
 };

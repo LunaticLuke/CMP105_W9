@@ -6,7 +6,7 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	input = in;
 
 	// initialise game objects
-
+	playerObject.setInput(input);
 }
 
 Level::~Level()
@@ -20,15 +20,17 @@ void Level::handleInput(float dt)
 	if (input->isKeyDown(sf::Keyboard::Enter))
 	{
 		//beachBalls.spawn();
-		goombas.spawn();
+		//goombas.spawn();
 	}
+	playerObject.handleInput(dt);
 }
 
 // Update game objects
 void Level::update(float dt)
 {
 	//beachBalls.update(dt);
-	goombas.update(dt);
+	//goombas.update(dt);
+	playerObject.update(dt);
 }
 
 // Render level
@@ -36,7 +38,9 @@ void Level::render()
 {
 	beginDraw();
 	//beachBalls.Render(window);
-	goombas.Render(window);
+	//goombas.Render(window);
+	window->draw(playerObject);
+	playerObject.getBulletManager().Render(window);
 	endDraw();
 }
 
